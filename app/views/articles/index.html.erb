@@ -1,0 +1,14 @@
+<h1>hello how are your</h1>
+
+
+<% @articles.each do |article| %>
+<%= link_to article_path(article) do %>
+<%= article.title %>
+<img src="<%= article.photo1 %>" alt="">
+<img src="<%= article.photo2 %>" alt="">
+<%= article.subtitle %>
+<% end %>
+<% end %>
+
+
+<%= link_to 'articlenew', new_article_path %>
