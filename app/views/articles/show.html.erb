@@ -1,3 +1,48 @@
-<h1>hello this is showarticles</h1>
-<h1><%= @article.title %></h1>
-<img src="<%= @article.photo1 %>" alt="">
+<div class="show-container">
+  <div class="main-article">
+    <p> <%= @article.category %></p>
+    <h2><%= @article.title %></h2>
+    <h3><%= @article.subtitle %></h3>
+  </div>
+  <div class="author">
+    <h4><%= @article.author %> </h4>
+    <h5> <%= @article.created_at.in_time_zone("Buenos Aires").strftime('%d %B - %H:%M') %></h5>
+  </div>
+  <div class="wrapper">
+    <div class="midle-article">
+      <img src="<%= @article.photo1 %> " alt="">
+      <p> <%= @article.texto %></p>
+      <img src="<%= @article.photo2 %>" alt="">
+      <p> <%= @article.texto2 %></p>
+      <img src="<%= @article.photo3 %> " alt="">
+      <p> <%= @article.texto3 %></p>
+      <img src="<%= @article.photo4 %>" alt="">
+      <p> <%= @article.texto4 %></p>
+      <h1> Ultimas Noticias</h1>
+      <% recommended_array = Article.order(created_at: :desc) %>
+      <% current_index = recommended_array.find_index(@article) %>
+      <% next_article = recommended_array[current_index -1 ] %>
+      <%= link_to article_path(next_article) do %>
+      <h3> <%= next_article.title %></h3>
+      <img class= "bottom" src="<%= next_article.photo1 %> ">
+      <% end %>
+      <% article2 = Article.order(created_at: :desc) %>
+      <% current_index = article2.find_index(@article) %>
+      <% next_article2 = article2[current_index - 2] %>
+      <%= link_to article_path(next_article2) do %>
+      <h3> <%= next_article2.title %></h3>
+      <img class= "bottom" src="<%= next_article2.photo1 %> " >
+      <% end %>
+      <% article3 = Article.order(created_at: :desc) %>
+      <% current_index = article3.find_index(@article) %>
+      <% next_article3 = article3[current_index - 3] %>
+      <%= link_to article_path(next_article3) do %>
+      <h3> <%= next_article3.title %></h3>
+      <img class= "bottom" src="<%= next_article3.photo1 %> " >
+      <% end %>
+    </div>
+    <div id="list">
+      <h1>Las mas leidas</h1>
+    </div>
+  </div>
+</div>
