@@ -46,14 +46,15 @@
     </div>
   </div>
 </div>
+<div class="container">
+  <% if user_signed_in? %>
 
-<% if user_signed_in? %>
+  <%= link_to article_path(@article), method: :delete, data: { confirm: "Are you sure?" } do %>
+  <div class="button-delete">
+    Borrar noticia
+  </div>
+  <% end %>
 
-<%= link_to article_path(@article), method: :delete, data: { confirm: "Are you sure?" } do %>
-<div class="button-delete">
-  Borrar noticia
+  <% else %>
+  <%end  %>
 </div>
-<% end %>
-
-<% else %>
-<%end  %>
