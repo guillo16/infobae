@@ -1,14 +1,15 @@
-<h1>hello how are your</h1>
-
-
-<% @articles.each do |article| %>
-<%= link_to article_path(article) do %>
-<%= article.title %>
-<img src="<%= article.photo1 %>" alt="">
-<img src="<%= article.photo2 %>" alt="">
-<%= article.subtitle %>
-<% end %>
-<% end %>
-
+<div class="wrapper-noticias">
+  <div class="noticia-container">
+    <% @articles.each do |article|  %>
+    <%= render 'shared/articulo', article: article %>
+    <% end %>
+  </div>
+  <div id="noticia-ranking">
+    <h2>Mas Leidas</h2>
+   <% @articles.each do |article|  %>
+   <%= render 'shared/ranking', article: article %>
+   <% end %>
+ </div>
+</div>
 
 <%= link_to 'articlenew', new_article_path %>
