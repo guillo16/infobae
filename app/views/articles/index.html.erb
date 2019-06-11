@@ -1,6 +1,7 @@
 <div class="wrapper-noticias">
   <div class="noticia-container">
-    <% @articles.each do |article|  %>
+    <!-- reverse _each do is used to put articles in a diferent order -->
+    <% @articles.reverse_each do |article|  %>
     <%= render 'shared/articulo', article: article %>
     <% end %>
   </div>
@@ -22,7 +23,8 @@
     <% end %>
   </div>
   <%else %>
-  <%= link_to t(".sign_in", default: "Log In"), new_user_session_path, class: "navbar-wagon-item navbar-wagon-link" %>
-
   <%end  %>
 </div>
+
+
+<%= link_to t(".sign_in", default: "Log In"), new_user_session_path, class: "navbar-wagon-item navbar-wagon-link" %>
