@@ -1,6 +1,21 @@
-<h1>this is new</h1>
-<%= simple_form_for @article do |f| %>
-  <%= f.input :title %>
+<div class="container">
+
+  <%= simple_form_for @article do |f| %>
+  <%= f.input :category , label: "Categoria", required: true, :collection => ["Politica", "Mundo", "Deporte", "Espectaculos", "Economia", "Tecno"] %>
+  <%= f.input :title, label: "Titulo" %>
+  <%= f.input :subtitle %>
+  <%= f.input :author %>
   <%= f.input :photo1 %>
-  <%= f.button :submit %>
-<% end %>
+  <%= f.input :texto %>
+  <%= f.input :photo2 %>
+  <%= f.input :texto2 %>
+  <%= f.input :photo3 %>
+  <%= f.input :texto3 %>
+  <%= f.input :photo4 %>
+  <%= f.input :texto4 %>
+
+  <%= f.button :submit, "Create Article", class: "btn btn-primary" %>
+
+  <% end %>
+
+</div>
