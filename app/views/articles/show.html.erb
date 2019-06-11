@@ -47,8 +47,13 @@
   </div>
 </div>
 
+<% if user_signed_in? %>
+
 <%= link_to article_path(@article), method: :delete, data: { confirm: "Are you sure?" } do %>
-  <div class="manage-button-grey">
-    Borrar noticia
-  </div>
-  <% end %>
+<div class="button-delete">
+  Borrar noticia
+</div>
+<% end %>
+
+<% else %>
+<%end  %>

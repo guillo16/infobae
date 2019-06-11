@@ -6,10 +6,19 @@
   </div>
   <div id="noticia-ranking">
     <h2>Mas Leidas</h2>
-   <% @articles.each do |article|  %>
-   <%= render 'shared/ranking', article: article %>
-   <% end %>
- </div>
+    <% @articles.each do |article|  %>
+    <%= render 'shared/ranking', article: article %>
+    <% end %>
+  </div>
 </div>
 
+<% if user_signed_in? %>
+
 <%= link_to 'articlenew', new_article_path %>
+<%= link_to destroy_user_session_path, method: :delete do %>
+<i class="fas fa-arrow-left"></i> <%= t(".sign_out", default: "Log out") %>
+<% end %>
+<%else %>
+      <%= link_to t(".sign_in", default: "Log In"), new_user_session_path, class: "navbar-wagon-item navbar-wagon-link" %>
+
+<%end  %>
