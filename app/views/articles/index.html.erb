@@ -1,15 +1,30 @@
 <div class="wrapper-noticias">
   <div class="noticia-container">
-    <% @articles.each do |article|  %>
+    <!-- reverse _each do is used to put articles in a diferent order -->
+    <% @articles.reverse_each do |article|  %>
     <%= render 'shared/articulo', article: article %>
     <% end %>
   </div>
   <div id="noticia-ranking">
     <h2>Mas Leidas</h2>
-   <% @articles.each do |article|  %>
-   <%= render 'shared/ranking', article: article %>
-   <% end %>
- </div>
+    <% @articles.each do |article|  %>
+    <%= render 'shared/ranking', article: article %>
+    <% end %>
+  </div>
+</div>
+<div class="container">
+  <% if user_signed_in? %>
+  <div class="button-new">
+    <%= link_to 'Nueva noticia', new_article_path %>
+  </div>
+  <div class="button-log">
+    <%= link_to destroy_user_session_path, method: :delete do %>
+    <i class="fas fa-arrow-left"></i> <%= t(".sign_out", default: "Log out") %>
+    <% end %>
+  </div>
+  <%else %>
+  <%end  %>
 </div>
 
-<%= link_to 'articlenew', new_article_path %>
+
+<%= link_to t(".sign_in", default: "Log In"), new_user_session_path, class: "navbar-wagon-item navbar-wagon-link" %>

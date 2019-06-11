@@ -1,0 +1,38 @@
+.button-delete {
+  padding: 10px 20px;
+  background-color: red;
+  color: white;
+  font-weight: bold;
+  font-size: 25px;
+  text-align: center;
+  border-radius: 6px;
+}
+
+.button-new {
+  padding: 10px 20px;
+  background-color: blue;
+
+  font-weight: bold;
+  font-size: 25px;
+  text-align: center;
+  border-radius: 6px;
+  margin-bottom: 20px;
+  a {
+    color: white;
+    text-decoration: none;
+  }
+}
+
+.button-log {
+ padding: 10px 20px;
+ background-color: black;
+
+ font-weight: bold;
+ font-size: 25px;
+ text-align: center;
+ border-radius: 6px;
+ margin-bottom: 20px;
+ a {
+  color: white;
+ }
+}
