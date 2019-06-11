@@ -3,10 +3,48 @@
   background: white;
 }
 
+.nav-link {
+  font-size: 14px;
+  font-weight: bold;
+
+}
 .navbar-lewagon .navbar-collapse {
   flex-grow: 0;
 }
 
 .navbar-lewagon .navbar-brand img {
-  width: 40px;
+  width: 200px;
+}
+
+
+@media (min-width: 992px) {
+ .nav-item {
+  display: none;
+ }
+
+ .navbar-lewagon {
+  justify-content: center;
+ }
+}
+
+
+.wrapper-1 {
+  display: flex;
+  justify-content: center;
+  width: 100%;
+  padding: 2px;
+  background-color: blue;
+
+  a {
+    color: white;
+    font-weight: bold;
+    font-size: 13px;
+  }
+}
+
+
+@media (max-width: 993px) {
+  .wrapper-1 {
+    display: none;
+  }
 }
