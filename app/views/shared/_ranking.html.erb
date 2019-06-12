@@ -1,1 +1,12 @@
-<h2>hola como andas</h2>
+<div class="ranking">
+  <%= link_to article_path(article) do %>
+  <div class="wrapper-ranking">
+    <div class= "ranking-title">
+      <h1><%= article.title %></h1>
+    </div>
+    <div class= "ranking-photo">
+      <img src="<%= article.photo1 %> " alt="">
+    </div>
+  </div>
+  <% end %>
+</div>
