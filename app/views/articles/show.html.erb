@@ -18,7 +18,7 @@
       <p> <%= @article.texto3 %></p>
       <img src="<%= @article.photo4 %>" alt="">
       <p> <%= @article.texto4 %></p>
-      <h1> Ultimas Noticias</h1>
+      <h2> Ultimas Noticias</h2>
       <% recommended_array = Article.order(created_at: :desc) %>
       <% current_index = recommended_array.find_index(@article) %>
       <% next_article = recommended_array[current_index -1 ] %>
@@ -42,8 +42,19 @@
       <% end %>
     </div>
     <div id="list">
-      <h1>Las mas leidas</h1>
+      <h2>Las mas leidas</h2>
+      <% Article.last(5).each do |article|  %>
+      <%= render 'shared/ranking', article: article %>
+      <% end %>
     </div>
+  </div>
+</div>
+<div class="mas-wrapper">
+  <h2> Mas noticias</h2>
+  <div class="mas-container">
+    <% Article.first(5).reverse_each do |article|  %>
+    <%= render 'shared/articulo', article: article %>
+    <% end %>
   </div>
 </div>
 <div class="container">
