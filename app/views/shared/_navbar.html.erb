@@ -11,43 +11,43 @@
   <div class="collapse navbar-collapse" id="navbarSupportedContent">
     <ul class="navbar-nav mr-auto">
       <li class="nav-item active">
-        <%= link_to articles_path(string: "") do %>Inicio<% end %>
+        <%= link_to articles_path do %>Inicio<% end %>
       </li>
       <li class="nav-item">
-       <%= link_to articles_path(string: "") do %>Ultimas Noticias<% end %>
+       <%= link_to articles_path(created_at: :asc) do %>Ultimas Noticias<% end %>
      </li>
      <li class="nav-item">
-      <%= link_to articles_path(string: "") do %>Mundo<% end %>
+      <%= link_to articles_path(category: "Mundo") do %>Mundo<% end %>
     </li>
     <li class="nav-item">
-      <%= link_to articles_path(string: "") do %>Politica<% end %>
+      <%= link_to articles_path(category: "Politica") do %>Politica<% end %>
     </li>
     <li class="nav-item">
-      <%= link_to articles_path(string: "") do %>Deportes<% end %>
+      <%= link_to articles_path(category: "Deportes") do %>Deportes<% end %>
     </li>
     <li class="nav-item">
-      <%= link_to articles_path(string: "") do %>Tecno<% end %>
+      <%= link_to articles_path(category: "Tecno") do %>Tecno<% end %>
     </li>
     <li class="nav-item">
-      <%= link_to articles_path(string: "") do %>Espectaculos<% end %>
+      <%= link_to articles_path(category: "Espectaculos") do %>Espectaculos<% end %>
     </li>
     <li class="nav-item">
-      <%= link_to articles_path(string: "") do %>Economia<% end %>
+      <%= link_to articles_path(category: "Economia") do %>Economia<% end %>
     </li>
     <li class="nav-item">
-      <%= link_to articles_path(string: "") do %>Autos<% end %>
+      <%= link_to articles_path(category: "Autos") do %>Autos<% end %>
     </li>
   </ul>
 </div>
 </div>
 <div class="wrapper-1">
-  <%= link_to articles_path(string: "") do %>Inicio<% end %>
-  <%= link_to articles_path(string: "") do %>Ultimas Noticias<% end %>
-  <%= link_to articles_path(string: "") do %>Mundo<% end %>
-  <%= link_to articles_path(string: "") do %>Politica<% end %>
-  <%= link_to articles_path(string: "") do %>Deportes<% end %>
-  <%= link_to articles_path(string: "") do %>Tecno<% end %>
-  <%= link_to articles_path(string: "") do %>Espectaculos<% end %>
-  <%= link_to articles_path(string: "") do %>Economia<% end %>
-  <%= link_to articles_path(string: "") do %>Autos<% end %>
+  <%= link_to articles_path do %>Inicio<% end %>
+  <%= link_to articles_path(created_at: :asc) do %>Ultimas Noticias<% end %>
+  <%= link_to articles_path(category: "Mundo") do %>Mundo<% end %>
+  <%= link_to articles_path(category: "Politica") do %>Politica<% end %>
+  <%= link_to articles_path(category: "Deportes") do %>Deportes<% end %>
+  <%= link_to articles_path(category: "Tecno") do %>Tecno<% end %>
+  <%= link_to articles_path(category: "Espectaculos") do %>Espectaculos<% end %>
+  <%= link_to articles_path(category: "Economia") do %>Economia<% end %>
+  <%= link_to articles_path(category: "Autos") do %>Autos<% end %>
 </div>
