@@ -43,7 +43,7 @@
     </div>
     <div id="list">
       <h2>Las mas leidas</h2>
-      <% Article.first(5).each do |article|  %>
+      <% Article.last(5).each do |article|  %>
       <%= render 'shared/ranking', article: article %>
       <% end %>
     </div>

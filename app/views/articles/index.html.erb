@@ -7,7 +7,7 @@
   </div>
   <div id="noticia-ranking">
     <h2>Mas Leidas</h2>
-    <% @articles.first(5).each do |article|  %>
+    <% @articles.last(5).each do |article|  %>
     <%= render 'shared/ranking', article: article %>
     <% end %>
   </div>
