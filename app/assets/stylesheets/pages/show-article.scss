@@ -28,22 +28,22 @@
 
 }
  // full page
-.author {
+ .author {
 
- border-top: 1px solid;
- border-color: lightgrey;
- h4 {
-  margin-top: 10px;
-  font-weight: bold;
-  color: blue;
-  font-size: 14px;
-  margin-bottom: 0px;
-}
+   border-top: 1px solid;
+   border-color: lightgrey;
+   h4 {
+    margin-top: 10px;
+    font-weight: bold;
+    color: blue;
+    font-size: 14px;
+    margin-bottom: 0px;
+  }
 
-h5 {
-  color:  grey;
-  font-size: 14px;
-}
+  h5 {
+    color:  grey;
+    font-size: 14px;
+  }
 }
 // flexbox begin
 
@@ -52,8 +52,17 @@ h5 {
 }
 
 #list {
-  flex: 0 0 200px;
-  padding: 15px;
+  flex: 0 0 350px;
+  padding: 25px;
+
+  h2 {
+    text-align: center;
+    padding: 5px;
+    background-color: grey;
+    font-weight: bold;
+    border-radius: 6px;
+    font-size: 16px;
+  }
 }
 
 .midle-article {
@@ -71,35 +80,35 @@ h5 {
   }
 
   h1 {
-  font-weight: bold;
-  text-align: center;
-  font-size: 17px;
-  padding: 2px;
-  background-color: grey;
-  border-radius: 6px;
- }
+    font-weight: bold;
+    text-align: center;
+    font-size: 17px;
+    padding: 2px;
+    background-color: grey;
+    border-radius: 6px;
+  }
 
- h3 {
+  h3 {
     color: black;
     font-weight: bold;
     font-size: 20px;
     // margin-bottom: 10px;
     margin-top:30px;
-     &:hover {
-    color: #069;
+    &:hover {
+      color: #069;
+    }
   }
- }
 
- a {
-  text-decoration: none;
+  a {
+    text-decoration: none;
 
- }
- .bottom {
-  width: 500px;
-  img {
+  }
+  .bottom {
+    width: 500px;
+    img {
      width: 500px;
-  }
-}
+   }
+ }
 }
 
 
@@ -109,14 +118,18 @@ h5 {
    display: block;
  }
 
- .midle-article {
-  .bottom {
-  width: 300px;
-  img {
-     width: 300px;
-  }
+ #list {
+  padding: 50px;
 }
+
+.midle-article {
+  .bottom {
+    width: 300px;
+    img {
+     width: 300px;
+   }
  }
+}
 
 
 }
