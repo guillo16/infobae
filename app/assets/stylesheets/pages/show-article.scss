@@ -113,13 +113,15 @@
 
 
 
-@media (max-width: 1000px) {
+@media (min-width: 100px) and (max-width: 675px) {
   .wrapper {
    display: block;
  }
 
  #list {
-  padding: 50px;
+  width: 300px;
+  padding: 15px;
+  margin: auto;
 }
 
 .midle-article {
@@ -132,4 +134,25 @@
 }
 
 
+}
+
+@media (min-width: 676px) and (max-width: 1023px) {
+  .wrapper {
+   display: block;
+ }
+
+ #list {
+  width: 400px;
+  padding: 15px;
+  margin: auto;
+}
+
+.midle-article {
+  .bottom {
+    width: 300px;
+    img {
+     width: 300px;
+   }
+ }
+}
 }
