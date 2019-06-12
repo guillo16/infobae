@@ -52,7 +52,6 @@
 <div class="mas-wrapper">
   <h2> Mas noticias</h2>
   <div class="mas-container">
-
     <% Article.first(5).reverse_each do |article|  %>
     <%= render 'shared/articulo', article: article %>
     <% end %>

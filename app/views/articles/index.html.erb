@@ -1,7 +1,7 @@
 <div class="wrapper-noticias">
   <div class="noticia-container">
     <!-- reverse _each do is used to put articles in a diferent order -->
-    <% @articles.reverse_each do |article|  %>
+    <% @articles.first(30).reverse_each do |article|  %>
     <%= render 'shared/articulo', article: article %>
     <% end %>
   </div>
