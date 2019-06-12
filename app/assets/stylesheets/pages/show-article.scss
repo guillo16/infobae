@@ -79,7 +79,7 @@
     margin-top: 45px;
   }
 
-  h1 {
+  h2 {
     font-weight: bold;
     text-align: center;
     font-size: 17px;
@@ -111,7 +111,29 @@
  }
 }
 
+.mas-wrapper {
+ width: 90%;
+ margin: 0 auto;
 
+ h2 {
+  font-weight: bold;
+  text-align: center;
+  font-size: 17px;
+  padding: 2px;
+  background-color: grey;
+  border-radius: 6px;
+  margin-top: 20px;
+}
+}
+.mas-container {
+  display: grid;
+  grid-template-columns: 1fr 1fr ;
+  grid-gap: 26px;
+  padding: 26px;
+  justify-content: center;
+}
+
+// RESPONSIVE..
 
 @media (min-width: 100px) and (max-width: 675px) {
   .wrapper {
@@ -119,7 +141,7 @@
  }
 
  #list {
-  width: 300px;
+
   padding: 15px;
   margin: auto;
 }
@@ -132,7 +154,12 @@
    }
  }
 }
-
+.mas-container {
+  display: grid;
+  grid-template-columns: 1fr  ;
+  grid-gap: 10px;
+  padding: 10px;
+}
 
 }
 
@@ -142,7 +169,7 @@
  }
 
  #list {
-  width: 400px;
+  width: 70%;
   padding: 15px;
   margin: auto;
 }
@@ -154,5 +181,11 @@
      width: 300px;
    }
  }
+}
+.mas-container {
+  display: grid;
+  grid-template-columns: 1fr  ;
+  grid-gap: 26px;
+  padding: 26px;
 }
 }
