@@ -1,0 +1,23 @@
+
+<div class="container">
+  <h1>Editar Noticia</h1>
+  <%= simple_form_for @article do |f| %>
+  <%= f.error_notification %>
+
+  <%= f.input :category, label: 'Categoria', required: true, value: @article.category %>
+  <%= f.input :title, label: 'Titulo', required: true, value: @article.title %>
+  <%= f.input :subtitle, label: 'Subtitulo', value: @article.subtitle %>
+  <%= f.input :author, label: 'Autor', required: true, value: @article.author %>
+  <%= f.input :photo1, label: 'Foto 1', required: true, value: @article.photo1 %>
+  <%= f.input :texto, label: 'Texto 1', required: true, value: @article.texto %>
+  <%= f.input :photo2,label: 'Foto 2', required: true, value: @article.photo2 %>
+  <%= f.input :texto2, label: 'Texto 2', required: true, value: @article.texto2 %>
+  <%= f.input :photo3,label: 'Foto 3', required: true, value: @article.photo3 %>
+  <%= f.input :texto3, label: 'Texto 3', required: true, value: @article.texto3 %>
+  <%= f.input :photo4,label: 'Foto 4', required: true, value: @article.photo4 %>
+  <%= f.input :texto4, label: 'Texto 4', required: true, value: @article.texto4 %>
+
+  <%= f.button :submit, "Actualizar Cambio", class: 'btn btn-primary' %>
+
+  <% end %>
+</div>
