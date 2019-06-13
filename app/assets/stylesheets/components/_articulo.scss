@@ -5,7 +5,7 @@
  border-color: lightgrey;
 
  h1 {
-  font-size: 17px;
+  font-size: 16px;
   color: black;
   font-weight: bold;
   text-align: left;
@@ -16,7 +16,7 @@
 }
 
 img {
-  width: 358px;
+  width: 300px;
   height: 200px;
   text-align: center;
   margin-bottom: 14px;
@@ -45,7 +45,19 @@ a {
 
 @media (min-width: 1100px) and (max-width: 2100px) {
   .articulo {
-      text-align: left;
+    text-align: left;
 
+  }
+}
+
+@media (max-width: 668px) and (min-width: 100px) {
+  .articulo {
+    img {
+      width: 358px;
+      height: 200px;
+    }
+    h1 {
+      font-size: 17px;
+    }
   }
 }
