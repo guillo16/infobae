@@ -3,8 +3,8 @@
 }
 
 #noticia-ranking {
-  flex: 0 0 300px;
-  padding: 15px;
+  flex: 0 0 280px;
+  padding: 12px;
   h2 {
     text-align: center;
     padding: 5px;
@@ -19,9 +19,9 @@
 
 .noticia-container {
   display: grid;
-  grid-template-columns: 1fr 1fr ;
-  grid-gap: 26px;
-  padding: 26px;
+  grid-template-columns: 1fr 1fr 1fr;
+  grid-gap: 10px;
+  padding: 10px;
   // justify-items: center;
 }
 
